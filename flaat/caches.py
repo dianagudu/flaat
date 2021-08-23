@@ -8,7 +8,7 @@ access to OIDC authenticated REST APIs.'''
 # pylint: disable=wrong-import-position, no-self-use, line-too-long
 
 import logging
-from . import logsetup
+
 logger = logging.getLogger(__name__)
 
 class Issuer_config_cache():
@@ -22,7 +22,7 @@ class Issuer_config_cache():
         #     logger.info(F"updating: {iss}")
         # else:
         #     logger.info(F"adding: {iss}")
-        self.entries[issuer_config['issuer']] = issuer_config
+        self.entries[iss] = issuer_config
     def add_list(self, issuer_configs):
         '''add entry'''
         for issuer_config in issuer_configs:
